@@ -158,8 +158,6 @@ my $parser = UnUsedModules->new({
     %options,
 });
 
-use Data::Dumper;
-print STDERR Dumper $parser->lib_path_list;
 my @modules = $parser->run;
 for my $module (@modules) {
     print "use $module;\n";
